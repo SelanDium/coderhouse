@@ -1,0 +1,29 @@
+<h1>CARTS VIEWS</h1>
+<div class="card" style="width: 18rem;">
+    <li class="list-group-item"><b>CART ID:</b> {{this._id}}</li>
+</div>
+
+<div style="padding: 15px;" class ="buton">
+    <a href="http://localhost:8080/productlist/?page=1&limit=10" class="btn btn-primary" method="get">Volver</a>             
+ </div>
+
+</div>
+    {{#each products}}
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Title:</b> {{this.product.title}}</li>
+            <li class="list-group-item"><b>Description:</b> {{this.product.description}}</li>
+            <li class="list-group-item"><b>Code:</b> {{this.product.code}}</li> 
+            <li class="list-group-item"><b>Price:</b> ${{this.product.price}}</li>
+            <li class="list-group-item"><b>Stock: </b>{{this.product.stock}}</li>
+            <li class="list-group-item"><b>Category: </b>{{this.product.category}}</li>
+            <li class="list-group-item"><b>Thumbnails: </b> {{this.product.thumbnails}}</li>
+            <li class="list-group-item"><b>Status:</b> {{this.product.status}}</li>
+            <li class="list-group-item"><b>ID:</b> {{this.product._id}}</li>
+            <li class="list-group-item"><b>Quantity:</b> {{this.quantity}}</li>
+        </ul>
+    </div>     
+   {{/each}}
+
+</div>
+  
